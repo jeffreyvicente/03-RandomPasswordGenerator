@@ -1,21 +1,36 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    
   </head>
+
+  <!-- START of the HTML body -->
   <body>
+    <!-- START of the class named wrapper-->
     <div class="wrapper">
+
+      <!-- START of the page header-->
       <header>
         <h1>Password Generator</h1>
       </header>
+      <!-- END of the page header-->
+
+      <!-- START of the class named card-->
       <div class="card">
+        
+        <!-- START of the class named card-header-->
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+        <!-- END of the class named card-header-->
+
+        <!-- START of the class named card-body-->
         <div class="card-body">
           <textarea
             readonly
@@ -24,11 +39,22 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+        <!-- END of the class named card-body-->
+
+         <!-- START of the class named card-footer-->
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
+           <!-- END of the class named card-footer-->
+
       </div>
+      <!-- END of the class named wrapper-->
+
     </div>
-    <script src="script.js"></script>
+    <!-- END of the class named wrapper-->
+
+    <script src="./scripts/script.js"></script>
+
   </body>
+  <!-- END of the HTML BODY -->
 </html>

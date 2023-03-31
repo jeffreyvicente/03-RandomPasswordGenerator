@@ -46,7 +46,7 @@ THEN the password is either displayed in an alert or written to the page
 ```
 ## Mock-Up
 
-![alt text](images\readme\readme-project-mockup.png)
+![alt text](images\readme-project-mockup.png)
 
 ## Preview
 
