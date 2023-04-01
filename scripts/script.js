@@ -1,13 +1,5 @@
 // Assignment code here
 
-/*
-password length
-password must be between 8 and 128
-prompt for character types
-upper lower case prompt
-Create check for all the above
-
-*/
 var minPasswordLength = 8;
 var maxPasswordLength = 128;
 
@@ -31,7 +23,6 @@ console.log("This is the temp char value " + tempChar);
 //temp3 = temp3 + tempChar;
 temp3 += tempChar;
 console.log("Temp 3 value "+ temp3);
-
 
 }
 */
@@ -85,7 +76,6 @@ function upperLetterCase(){
     characterLibrary += alphaUpperLibrary;
     //Test condition printed in console. 
     //console.log("This is from the Uper Case function: " + characterLibrary)
-
   }else{
     alert("You have chosen to EXCLUDE upper case characters!");
   }
@@ -125,12 +115,6 @@ function numberPrompt(){
 
 function passwordVerification(length, lower, upper, symbol, number){
 
-
-  if (lower == false && upper == false && symbol == false && number == false)
-  {
-    
-  }
-
   //Test condtion to check if the variables in the method are passing properly
   //console.log("This is a test of passing variables into a function " + length +" "+ lower + " " + upper + " " + symbol);
   var userInput = confirm("Would you like to continue with the following password characters? \n\nPassord Length: " + length + "\nLower Case: " + lower + "\nUpper Case: " + upper + "\nSymbols: "+ symbol + "\nNumbers: " + number +"\n\nYes - Press OK \nNo - Press Cancel ");
@@ -162,7 +146,15 @@ function writePassword() {
   
 
  
-  
+  if(characterLibrary == "")
+  {
+    console.log("characterLibrary is blank");
+    alert("You have chosen no character, please try again.");
+  }else{
+    passwordVerification(length, lower, upper, symbol, number);
+    applyPassword();
+
+  }
 
 
   //Console check to ensure return values from the methods above are returned properly.
@@ -173,19 +165,17 @@ function writePassword() {
   console.log("This is the symbol output "+ symbol);
   */
 
-  passwordVerification(length, lower, upper, symbol, number);
 
   //generatePassword(length);
 
   //Orginal project code commented out for testing. 
-  
+  function applyPassword(){
   var password = generatePassword(length);
   
-
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  
+  }
 }
 
 // Add event listener to generate button
