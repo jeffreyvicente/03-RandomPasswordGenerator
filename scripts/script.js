@@ -11,6 +11,7 @@ Create check for all the above
 var minPasswordLength = 8;
 var maxPasswordLength = 128;
 
+//Prompts the user for the password length
 function passwordLength(){
   var length = prompt("How long do you want the password to be?");
   if (length < minPasswordLength || length > maxPasswordLength){
@@ -20,19 +21,36 @@ function passwordLength(){
   }
 }
 
+//Prompts the user if the password requires lower case values
 function lowerLetterCase(){
-  var letterCaseInput = confirm("Do you want lower case characters in the password? \nYes - Press OK \nNo - Press Cancel");
-  
- 
+  var letterCaseInput = confirm("Do you want LOWER case characters in the password? \nYes - Press OK \nNo - Press Cancel");
   if (letterCaseInput == true){
-    alert(letterCaseInput);
-    
+    alert("You have chosen to INCLUDE lower case characters!");
   }else{
-    alert(letterCaseInput);
+    alert("You have chosen to EXCLUDE lower case characters!");
   }
-
-
 }
+
+//Prompts the user if the password requires upper case values
+function upperLetterCase(){
+  var letterCaseInput = confirm("Do you want UPPER case characters in the password? \nYes - Press OK \nNo - Press Cancel");
+  if (letterCaseInput == true){
+    alert("You have chosen to INCLUDE upper case characters!");
+  }else{
+    alert("You have chosen to EXCLUDE upper case characters!");
+  }
+}
+
+//Prompts the user if the password requires special values
+function symbolsPrompt(){
+  var letterCaseInput = confirm("Do you want SPECIAL characters in the password? \nYes - Press OK \nNo - Press Cancel");
+  if (letterCaseInput == true){
+    alert("You have chosen to INCLUDE special characters!");
+  }else{
+    alert("You have chosen to EXCLUDE special characters!");
+  }
+}
+
 
 
 
@@ -44,6 +62,8 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   passwordLength();
   lowerLetterCase();
+  upperLetterCase();
+  symbolsPrompt();
 
   //Orginal project code commented out for testing. 
   /* 
