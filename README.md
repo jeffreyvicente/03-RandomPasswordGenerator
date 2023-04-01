@@ -50,10 +50,10 @@ THEN the password is either displayed in an alert or written to the page
 View live preview hosted on [GitHub Pages](https://jeffreyvicente.github.io/03-random-password-generator/)
 
 ![alt text](/assets/images/readme-page-screenshot-02.png)
-Completed page prompting for userinput. <br><br>
+Completed page prompting for user input. User entered 10 to generate a password with 10 characters. <br><br>
 
 ![alt text](/assets/images/readme-page-screenshot-03.png)
-Winodow page displaying user of selected password conditions. <br><br>
+Winodow page displaying the user of their selected password conditions. <br><br>
 
 ![alt text](/assets/images/readme-page-screenshot-04.png)
 Generated password once the user completes all window prompts.
