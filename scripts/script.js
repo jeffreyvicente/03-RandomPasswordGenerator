@@ -36,10 +36,13 @@ console.log("Temp 3 value "+ temp3);
 }
 */
 
-function generatePassword(lenght){
+function generatePassword(passwordLength){
 
-  for(index = 0; index < length; index++){
-    
+  passwordContainer = "";
+  for(index = 0; index < passwordLength; index++){
+    var randomChar = characterLibrary.charAt(Math.random(Math.floor) * characterLibrary.length);
+    passwordContainer += randomChar;
+    console.log ("This is the value in generatePassord " + passwordContainer);
   }
   
 }
@@ -140,6 +143,8 @@ function writePassword() {
 
   console.log("Printing out the library " + characterLibrary);
 
+  
+
  
   
 
@@ -153,6 +158,9 @@ function writePassword() {
   */
 
   passwordVerification(length, lower, upper, symbol, number);
+
+  generatePassword(length);
+
   //Orginal project code commented out for testing. 
   /* 
   var password = generatePassword();
