@@ -14,7 +14,29 @@ var maxPasswordLength = 128;
 var characterLibrary = "";
 var alphaLowerLibrary = "abcdefghijklmnopqrstuvwxyz";
 var alphaUpperLibrary = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
+var numberLibrary = "0123456789"
 var symbolsLibrary = "!@#$%^&*()";
+
+var temp3 = "";
+
+for (index = 0; index < 10 ; index++){
+var templib = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ0123456789"
+var temp2 = templib.length;
+console.log("This is the temp2 value " + temp2);
+var tempChar = templib.charAt(Math.random(Math.floor) * templib.length);
+console.log("This is the temp char value " + tempChar);
+
+//temp3 = temp3 + tempChar;
+temp3 += tempChar;
+console.log("Temp 3 value "+ temp3);
+
+
+}
+
+
+function generatePassword(){
+  
+}
 
 //Prompts the user for the password length
 function passwordLength(){
