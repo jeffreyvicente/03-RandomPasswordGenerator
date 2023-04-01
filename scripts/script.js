@@ -17,7 +17,7 @@ var alphaUpperLibrary = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
 var numberLibrary = "0123456789"
 var symbolsLibrary = "!@#$%^&*()";
 
-//Test generatePassword function
+//Test generatePassword function without entering values
 /*
 var temp3 = "";
 
@@ -42,8 +42,11 @@ function generatePassword(passwordLength){
   for(index = 0; index < passwordLength; index++){
     var randomChar = characterLibrary.charAt(Math.random(Math.floor) * characterLibrary.length);
     passwordContainer += randomChar;
-    console.log ("This is the value in generatePassord " + passwordContainer);
+    //Test condition printed in console. 
+    //console.log ("This is the value in generatePassord " + passwordContainer);
   }
+
+  return passwordContainer;
   
 }
 
@@ -66,7 +69,8 @@ function lowerLetterCase(){
   if (letterCaseInput == true){
     alert("You have chosen to INCLUDE lower case characters!");
     characterLibrary += alphaLowerLibrary;
-    console.log("This is from the lower Case function: " + characterLibrary)
+    //Test condition printed in console. 
+    //console.log("This is from the lower Case function: " + characterLibrary)
   }else{
     alert("You have chosen to EXCLUDE lower case characters!");
   }
@@ -79,7 +83,8 @@ function upperLetterCase(){
   if (letterCaseInput == true){
     alert("You have chosen to INCLUDE upper case characters!");
     characterLibrary += alphaUpperLibrary;
-    console.log("This is from the Uper Case function: " + characterLibrary)
+    //Test condition printed in console. 
+    //console.log("This is from the Uper Case function: " + characterLibrary)
 
   }else{
     alert("You have chosen to EXCLUDE upper case characters!");
@@ -93,7 +98,9 @@ function symbolsPrompt(){
   if (letterCaseInput == true){
     alert("You have chosen to INCLUDE special characters!");
     characterLibrary += symbolsLibrary;
-    console.log("This is from the Symbols function: " + characterLibrary)
+    
+    //Test condition printed in console. 
+    //console.log("This is from the Symbols function: " + characterLibrary)
 
   }else{
     alert("You have chosen to EXCLUDE special characters!");
@@ -106,7 +113,9 @@ function numberPrompt(){
   if (letterCaseInput == true){
     alert("You have chosen to INCLUDE numnbers!");
     characterLibrary += numberLibrary;
-    console.log("This is from the Number function: " + characterLibrary)
+    
+    //Test condition printed in console. 
+    //console.log("This is from the Number function: " + characterLibrary)
 
   }else{
     alert("You have chosen to EXCLUDE numbers!");
@@ -115,6 +124,12 @@ function numberPrompt(){
 }
 
 function passwordVerification(length, lower, upper, symbol, number){
+
+
+  if (lower == false && upper == false && symbol == false && number == false)
+  {
+    
+  }
 
   //Test condtion to check if the variables in the method are passing properly
   //console.log("This is a test of passing variables into a function " + length +" "+ lower + " " + upper + " " + symbol);
@@ -141,7 +156,8 @@ function writePassword() {
   var symbol = symbolsPrompt();
   var number = numberPrompt();
 
-  console.log("Printing out the library " + characterLibrary);
+  //Test case to verify data in console log.
+  //console.log("Printing out the library " + characterLibrary);
 
   
 
@@ -159,15 +175,17 @@ function writePassword() {
 
   passwordVerification(length, lower, upper, symbol, number);
 
-  generatePassword(length);
+  //generatePassword(length);
 
   //Orginal project code commented out for testing. 
-  /* 
-  var password = generatePassword();
+  
+  var password = generatePassword(length);
+  
+
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-  */
+  
 }
 
 // Add event listener to generate button
