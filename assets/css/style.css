@@ -1,3 +1,4 @@
+/*Start of CSS for index.html*/
 *,
 *::before,
 *::after {
@@ -11,18 +12,20 @@ body,
   margin: 0;
   padding: 0;
 }
-
+/*CSS atributes for the body*/
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/*CSS atributes for the wrapper container*/
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+/*CSS atributes for the header*/
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +33,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/*CSS atributes for the card section*/
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +46,7 @@ header {
   padding: 30px 40px;
 }
 
+/*CSS atributes for card-header after*/
 .card-header::after {
   content: " ";
   display: block;
@@ -50,14 +55,17 @@ header {
   height: 2px;
 }
 
+/*CSS atributes for card-body*/
 .card-body {
   min-height: 100px;
 }
 
+/*CSS atributes for card-footer*/
 .card-footer {
   text-align: center;
 }
 
+/*CSS atributes for card-footer after*/
 .card-footer::before {
   content: " ";
   display: block;
@@ -65,13 +73,15 @@ header {
   background: #e7e9eb;
   height: 2px;
 }
-
+/*CSS atributes for card-footer before*/
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
 
+
+/*CSS atributes for page button*/
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -88,6 +98,7 @@ header {
   cursor: pointer;
 }
 
+
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
@@ -97,6 +108,8 @@ button[disabled] {
   float: right;
 }
 
+
+/*CSS atributes for password field*/
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +131,8 @@ button[disabled] {
   overflow: hidden;
 }
 
+
+/*CSS atributes for a responsive design for a device that has a screen with 690px*/
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -130,8 +145,10 @@ button[disabled] {
   }
 }
 
+/*CSS atributes for a responsive design for a device that has a screen with 500px*/
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
   }
 }
+/*End of CSS for index.html*/

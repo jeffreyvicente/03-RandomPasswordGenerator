@@ -6,9 +6,6 @@ This application wil generate a random password based on criteria users have sel
 
 This project is to showcase what I have recently learned in class.
 
-Page is reactive for phones when the max pixel width is at 580px.<br>
-Page is reactive for tablets when the max pizel width is at 768px. 
-
 
 ## Page Setup
 
@@ -46,12 +43,20 @@ THEN the password is either displayed in an alert or written to the page
 ```
 ## Mock-Up
 
-![alt text](assets\images\readme-project-mockup.png)
+![alt text](/assets/images/readme-mockup.png)
 
 ## Preview
 
 View live preview hosted on [GitHub Pages](https://jeffreyvicente.github.io/03-random-password-generator/)
 
+![alt text](/assets/images/readme-page-screenshot-02.png)
+Completed page prompting for userinput. <br><br>
+
+![alt text](/assets/images/readme-page-screenshot-03.png)
+Winodow page displaying user of selected password conditions. <br><br>
+
+![alt text](/assets/images/readme-page-screenshot-04.png)
+Generated password once the user completes all window prompts.
 
 
 
