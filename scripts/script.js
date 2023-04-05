@@ -7,7 +7,7 @@ var maxPasswordLength = 128;
 var characterLibrary = "";
 var alphaLowerLibrary = "abcdefghijklmnopqrstuvwxyz";
 var alphaUpperLibrary = "ABCDEFGHIJKLMNOPQRSTUVWXTZ";
-var numberLibrary = "0123456789"
+var numberLibrary = "0123456789";
 var symbolsLibrary = "!@#$%^&*()";
 
 /*
@@ -20,10 +20,11 @@ function generatePassword(passwordLength){
   passwordContainer = "";   //Empty string to hold password during scipt
   for(index = 0; index < passwordLength; index++){
     var randomChar = characterLibrary.charAt(Math.random(Math.floor) * characterLibrary.length);    //Grabs the random character from the character library 
+    //console.log("This the the value of random char " + random);
     passwordContainer += randomChar;    //Adds the random character to the empty string
     
     //Test condition printed in console. 
-    //console.log ("This is the value in generatePassord " + passwordContainer);
+    console.log ("This is the value in generatePassord " + passwordContainer);
   }
 
   //Retruns the password string
@@ -38,10 +39,10 @@ Output: Retruns the value entered from the window prompt
 */
 function passwordLength(){
   var length = prompt("How long do you want the password to be?");  //Prompts the user for password length. 
-  if (length < minPasswordLength || length > maxPasswordLength){    //Verfies if password meets requied condtion 
+  while (length < minPasswordLength || length > maxPasswordLength){    //Verfies if password meets requied condtion 
     //Informs the user that the password is the incorrect length and prompts the user to try again. 
-    alert("The length must be greater than " + 8 + " and less than " + maxPasswordLength + ". \nPlease try again!!");
-    passwordLength(); //Prompts for password length 
+    alert("The length must be greater than " + minPasswordLength + " and less than " + maxPasswordLength + ". \nPlease try again!!");
+    length = prompt("How long do you want the password to be?");
   }
 
   //Returns the length the user entered 
@@ -60,13 +61,13 @@ function lowerLetterCase(){
   var letterCaseInput = confirm("Do you want LOWER case characters in the password? \nYes - Press OK \nNo - Press Cancel");
   //User validation, displays the user selection.
   if (letterCaseInput == true){
-    alert("You have chosen to INCLUDE lower case characters!"); ////Alerts the user of their choice
+    alert("You have chosen to INCLUDE lower case characters!"); //Alerts the user of their choice
     characterLibrary += alphaLowerLibrary;  //Adds the lower case values to the character library.
     
     //Test condition printed in console. 
-    //console.log("This is from the lower Case function: " + characterLibrary)
+    console.log("This is from the lower Case function: " + characterLibrary)
   }else{
-    alert("You have chosen to EXCLUDE lower case characters!"); ////Alerts the user of their choice
+    alert("You have chosen to EXCLUDE lower case characters!"); //Alerts the user of their choice
   }
 
   //Retruns ture or false value depending user selection
@@ -152,7 +153,9 @@ function passwordVerification(length, lower, upper, symbol, number){
 
   //If the user presses cacnel. The script will restart
   if(userInput == false){
-    writePassword()
+    return false;
+  }else{
+    return true;
   }
 
 }
@@ -181,9 +184,10 @@ function writePassword() {
     //console.log("characterLibrary is blank");
     alert("You have chosen no character, please try again."); //Alerts the user of the blank choices
   }else{
-    passwordVerification(length, lower, upper, symbol, number); //Calls the password setting validation window
+    var temp = passwordVerification(length, lower, upper, symbol, number); //Calls the password setting validation window
+    if(temp == true){
     applyPassword();  //Applys the password to the text box if section is not blank. 
-
+    }
   }
 
   //Console check to ensure return values from the methods above are returned properly.
